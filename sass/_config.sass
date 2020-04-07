@@ -1,0 +1,76 @@
+// USER VARIABLES SECTION
+
+$textfontsize: 18px // Body Font Size
+$otherfontsize: 16px 
+$menufontsize: 14px
+$textcolor: #00224b // Text Color
+$menuaccentcolor: #ffba38
+$elementcolor: #ffc102
+$accent: #a4a4a4
+$white: #fff
+$florentia: Florentia, sans-serif
+$opensans: OpenSansMain, sans serif
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+@import 'app/libs/bootstrap/css/bootstrap.min'
+@import 'app/libs/OwlCarousel/dist/assets/owl.carousel.min'
+@import 'app/libs/OwlCarousel/dist/assets/owl.theme.default.min'
+@import 'app/libs/fancybox/dist/jquery.fancybox.min'
+@import 'app/libs/datepicker/jquery-ui'
+@import 'node_modules/aos/dist/aos'
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		// font-display: swap // Uncomment to initially display system fonts
+		src: local($fname), url($furl) format('woff2')
+
+@include font('Florentia', normal, 300, '../fonts/florentia-light-trial-webfont.woff2')
+@include font('Florentia', normal, 400, '../fonts/florentia-regular-trial-webfont.woff2')
+@include font('Florentia', normal, 500, '../fonts/florentia-medium-trial-webfont.woff2')
+@include font('Florentia', normal, 800, '../fonts/florentia-extrabold-trial-webfont.woff2')
+
+@include font('OpenSansMain', normal, 400, '../fonts/opensans-regular-webfont.woff2')
+@include font('OpenSansMain', normal, 600, '../fonts/opensans-semibold-webfont.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+html
+	overflow-x: hidden
+body
+	font-family: $opensans
+	font-size: $textfontsize
+	min-width: 320px
+	position: relative
+	line-height: 25px
+	overflow-x: hidden
+	color: $textcolor
+*
+	padding: 0
+	margin: 0
+.container
+	max-width: 1270px
+	padding: 0 15px
+.row
+	padding: 0
+	margin: 0
+.wrapper
+	display: flex
+	flex-direction: column
+	justify-content: center
+.align-center
+	align-items: center
+.pt10
+	padding-top: 100px
+.pb10
+	padding-bottom: 100px
+.pb5
+	padding-bottom: 50px

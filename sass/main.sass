@@ -1,0 +1,1244 @@
+@import config
+
+// ===== START HEADER SECTION =====
+header
+.header-top
+    padding: 20px 0
+    border-bottom: 1px solid #ddd
+.header-logo
+    padding: 0
+.header-bar
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0
+.header-contact
+    color: $accent
+    display: flex
+    align-items: center
+    justify-content: center
+    .header-contact__text
+        font-family: $florentia
+        font-weight: 500
+        font-size: $otherfontsize
+        .header-contact__phone
+            font-size: $textfontsize
+            font-family: $florentia
+            font-weight: 500
+            color: #00224b
+    img
+        margin-right: 10px
+.btn
+    min-width: 230px
+    border-radius: 25px
+    color: $white
+    font-size: $otherfontsize
+    padding: 19px 25px
+    white-space: nowrap
+    border: none
+    line-height: 12px
+    background-color: #00224b
+    &:hover
+        background-color: #004394
+        color: $white
+    &:focus
+        box-shadow: none
+.btn_maxwidth
+    min-width: 295px
+.btn-primary
+    background-color: $elementcolor
+    &:hover
+        background-color: #ffa800
+    &:focus, &:active
+        box-shadow: none !important
+        background-color: #ffa800 !important
+.mr2
+    margin-right: 20px
+.header-language
+    display: flex
+    .header-language-item
+        margin-right: 16px
+.dropdown
+    .dropdown-toggle
+        color: #a1a1a1
+        &:hover
+            text-decoration: none
+    .header-language-item
+        margin: 0
+.dropdown-menu
+    padding: 10px
+    min-width: 107px
+    top: 40px
+    left: 50%
+    margin-left: -51px
+.header-language:last-child
+    margin-right: 0
+.header-language-item
+    font-size: $menufontsize
+    font-family: Florentia
+    font-weight: 300
+    line-height: 40px
+    color: #9d9d9d
+    width: 40px
+    height: 40px
+    border: 1px solid #dbdbdb
+    border-radius: 50%
+    display: inline-block
+    text-align: center
+    text-transform: uppercase
+    transition: all 0.25s ease-in-out
+.header-language-item.active, .header-language-item:hover
+    background-color: #ededed
+    color: #333333
+    text-decoration: none
+.navbar-toggler
+    &:hover
+        .header-language-item
+            background-color: #ededed
+            color: #333333
+    .dropdown-toggle
+        .header-language-item
+            margin: 0
+.header-bottom
+    display: flex
+    justify-content: center
+    box-shadow: 0 6px 8px -2px rgba(0,34,75,.2)
+    background-color: $white
+.f-nav
+    z-index: 9999
+    position: fixed
+    top: 0
+    width: 100%
+
+.navbar-expand-lg .navbar-nav .nav-link, .navbar
+    padding: 0
+.nav-item
+    color: $textcolor
+    font-family: Florentia
+    font-weight: 500
+    font-size: $menufontsize
+    list-style: none
+    margin: 19px 0
+    .nav-link
+        letter-spacing: 0.04px
+        color: $textcolor
+        white-space: nowrap
+        margin-right: 30px
+    .nav-link:hover
+        color: $menuaccentcolor
+        text-decoration: underline
+.nav-item.active
+    .nav-link
+        color: $menuaccentcolor
+        text-decoration: underline
+.icon-bar
+    width: 33px
+    height: 3px
+    background-color: $textcolor
+    display: block
+    transition: all 0.2s
+    margin-top: 4px
+    border-radius: 25px
+.navbar-toggler
+    border: none
+    background: transparent
+    &:focus
+        outline: none
+.navbar-toggler
+    .top-bar
+        transform: rotate(45deg)
+        transform-origin: 20% 10%
+    .middle-bar
+        opacity: 0
+    .bottom-bar
+        transform: rotate(-45deg)
+        transform-origin: 15% 100%
+    &.collapsed
+        .top-bar
+            transform: rotate(0)
+        .middle-bar
+            opacity: 1
+        .bottom-bar
+            transform: rotate(0)
+
+@media screen and ( max-width: 767px )
+    .header-logo
+        text-align: center
+    .btn
+        min-width: 140px
+    .header-bar
+        margin-left: 10px
+        justify-content: flex-start
+        .btn-primary
+            min-width: 145px
+            padding: 13px 11px
+            margin-right: 13px
+        .header-contact
+            a
+                margin-right: 6px
+    .header-language-item
+        width: 37px
+        height: 37px
+    .nav-item
+        text-align: left
+        padding-left: 20px
+
+@media screen and ( max-width: 1199px )
+    header
+        .navbar
+            width: 100%
+        .navbar-toggler
+            right: 0
+            top: 0
+        .navbar-collapse
+            margin-top: 20px
+            text-align: center
+            box-shadow: 0 -6px 8px -2px rgba(0,34,75,.2)
+            .nav-link
+                margin: 0
+        .dropdown-toggle
+            &::after
+                margin: 0
+        .header-bottom
+            padding: 15px 0
+        #menu
+            &:nth-child(1)
+                margin-top: 20px
+        .nav-item
+            margin: 0px
+
+@media screen and ( min-width: 768px ) and ( max-width: 991px )
+    header
+        .container
+            padding: 0
+        .header-bar
+            margin-left: 15px
+        .btn-primary
+            margin-right: 20px
+        .header-contact__text
+            margin-right: 15px
+
+@media screen and ( min-width: 992px ) and ( max-width: 1199px )
+    header
+        .btn-primary
+            margin-right: 20px
+        .header-bar
+            margin-left: 15px
+        .header-bottom
+            .img-fluid
+                max-width: 280px
+                margin-left: 20px
+        .header-contact__text
+            margin-right: 15px
+
+@media screen and ( min-width: 1200px) and ( max-width: 1350px )
+    .header-bottom-navbar
+        .nav-item
+            .nav-link
+                max-width: 170px
+                text-overflow: ellipsis
+                text-align: center
+                overflow: hidden
+// ===== END HEADER SECTION =====
+
+// ===== START FIRSTSCREEN SECTION ===== 
+.section
+    display: flex
+    align-items: center
+.section-firstscreen
+    background-image: url(/images/dest/firstscreen/firstscreenimage.jpg)
+    width: 100%
+    min-height: 580px
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: 50% 100%
+    .firstscreen-wrapper
+        min-height: 580px
+        max-width: 700px
+    .firstscreen-title
+        font-family: $florentia
+        font-weight: 800
+        font-size: 48px
+        line-height: 50px
+        margin-bottom: 50px
+        padding-top: 110px
+        span
+            border-left: 5px solid $elementcolor
+            border-radius: 2px
+            padding-left: 25px
+            display: block
+            height: 100%
+            margin-bottom: 8px
+    .firstscreen-subtitle
+        font-weight: 600
+        font-size: 22px
+        line-height: 32px
+        color: #333
+        margin-bottom: 25px
+
+@media screen and ( max-width: 767px )
+    .section-firstscreen
+        min-height: 680px
+        background-position: 80% 100%
+        background-image: url(/images/dest/firstscreen/bg2.jpg)
+@media screen and ( max-width: 991px )
+    .section-firstscreen
+        background-position: 60% 100%
+        .firstscree-wrapper
+            max-width: 490px
+        .firstscreen-title
+            font-size: 26px
+            line-height: 36px
+            word-break: break-word
+            padding-top: 50px
+            margin-bottom: 29px
+        .firstscreen-subtitle
+            font-size: $otherfontsize
+            line-height: 24px
+            margin-bottom: 15px
+        .firstscreen-buttons
+            display: flex
+@media screen and ( min-width: 768px) and ( max-width: 991px )
+    .section-firstscreen
+        .firstscreen-wrapper
+            max-width: 490px
+@media screen and ( min-width: 992px) and ( max-width: 1280px )
+    .section-firstscreen
+        background-position: 60% 100%
+        .firstscreen-title
+            font-size: 44px
+            line-height: 55px
+            margin-bottom: 45px
+            padding-top: 100px
+        .firstscreen-subtitle
+            font-size: 20px
+            line-height: 30px
+            margin-bottom: 22px
+// ===== END FIRSTSCREEN SECTION ===== 
+
+// ===== START TRANSPLANTATION SECTION =====
+.section-transplantation
+    min-height: 850px
+    .btn-primary
+        padding: 20px 35px
+.cards
+    display: flex
+    justify-content: space-between
+.transplantation-wrapper
+    text-align: center
+    .transplantation-text
+        line-height: 28px
+        margin-bottom: 36px
+        max-width: 1200px
+    .card-wrapper
+        display: flex
+        justify-content: space-between
+        flex-basis: 25%
+    .transplantation-cards
+        margin-bottom: 39px
+        .arrow
+            display: flex
+            align-items: center
+            justify-content: center
+        .transplantation-card
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            width: 190px
+            height: 190px
+            border-radius: 50%
+            box-shadow: 0 3px 16px 2px rgba(0, 34, 75, 0.13)
+            overflow: hidden
+        .card-wrapper
+            .transplantation-card
+                margin-right: 5px
+        .card-title
+            font-size: 15px
+            line-height: 20px
+            text-transform: uppercase
+            letter-spacing: -0.15px
+            white-space: normal
+            font-weight: 400
+.title
+    max-width: 1200px
+    font-family: $florentia
+    font-weight: 800
+    font-size: 45px
+    line-height: 55px
+    margin: 0 auto 50px auto
+    text-align: center
+    &::after
+        content: ''
+        border-bottom: 3px solid $elementcolor
+        display: block
+        width: 190px
+        margin: 20px auto 0 auto
+
+@media screen and ( max-width: 640px )
+    .title
+        font-size: 30px
+        line-height: 40px
+        margin-bottom: 28px
+        &::after
+            margin-top: 14px
+    .pt10, .pb10
+        padding-top: 50px
+
+@media screen and ( max-width: 980px )
+    .transplantation-wrapper
+        .transplantation-cards
+            display: block
+            .card-wrapper
+                display: block
+                .transplantation-card
+                    margin: 0 auto 50px auto
+                .arrow
+                    transform: rotate(90deg)
+                    margin-bottom: 50px
+                .arror_mirrorY
+                    transform: rotate(90deg) scale(1, -1)
+            .transplantation-card
+                    margin: 0 auto
+        .btn-primary
+            margin-bottom: 50px
+
+@media screen and ( min-width: 641px) and ( max-width: 1280px )
+    .pt10
+        padding-top: 77px
+    .title
+        font-size: 40px
+        line-height: 50px
+        margin-bottom: 39px
+        &::after
+            margin-top: 22px
+@media screen and ( min-width: 980px) and ( max-width: 1280px )
+    .section-transplantation
+        min-height: 820px
+        .transplantation-wrapper
+            .transplantation-cards
+                .transplantation-card
+                    width: 167px
+                    height: 167px
+                    .card-title
+                        font-size: 13px
+                        line-height: 17px
+// ===== END TRANSPLANTATION SECTION =====
+
+// ===== START RESOLVE SECTION ===== 
+.section-resolve
+    width: 100%
+    min-height: 580px
+    background-size: cover
+    background-repeat: no-repeat
+.resolve-cards
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    .cards-wrapper
+        display: flex
+        justify-content: center
+    .resolve-card
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        max-width: 260px
+        flex-basis: 260px
+        .card-title
+            max-width: 245px
+            font-weight: 600
+        .zoom
+            transition: all 0.4s ease-out
+            &:hover
+                transform: scale(1.2)
+@media screen and ( max-width: 980px )
+    .resolve-cards
+        margin-bottom: 25px
+        .cards-wrapper
+            flex-wrap: wrap
+            .card-title
+                margin-bottom: 25px
+
+@media screen and (min-width: 640px) and ( max-width: 980px )
+    .resolve-cards
+        margin-bottom: 65px
+// ===== END RESOLVE SECTION ===== 
+
+// ===== START CAPABILITY SECTION ===== 
+.section-capability
+    min-height: 780px
+.capability-card
+    flex-basis: 600px
+    max-width: 610px
+    margin: 0 auto
+    background-color: #e3e3e3
+    border-radius: 20px
+    overflow: hidden
+    position: relative
+    .card-title
+        color: $white
+        font-family: $florentia
+        font-weight: 800
+        font-size: 30px
+        line-height: 40px
+        margin-bottom: 44px
+        position: absolute
+        bottom: 0%
+        width: 100%
+        text-align: center
+
+@media screen and ( max-width: 640px )
+    .section-capability
+        min-height: 870px
+        .col-lg-6
+            padding: 0
+    .capability-card
+        min-height: 212px
+        .card-title
+            font-size: 20px
+            margin-bottom: 16px
+            line-height: 28px
+            text-align: center
+
+@media screen and ( max-width: 991px )
+    .capability-card
+        margin-bottom: 20px
+// ===== END CAPABILITY SECTION ===== 
+
+//  ===== START PROCEDURES SECTION ===== 
+.section-procedure
+    min-height: 1020px
+    background-size: cover
+    background-repeat: no-repeat
+    .procedure-description
+        display: flex
+        align-items: center
+
+        .procedure-img
+            box-shadow: 0 3px 16px 2px rgba(0, 34, 75, 0.13)
+            border-radius: 4px
+            background-color: $white
+            margin: 0 20px 20px 0
+        .description-text
+            line-height: 28px
+            max-width: 205px
+            strong
+                font-weight: 600
+    .procedure-title
+        font-weight: 600
+        font-size: 24px
+        line-height: 28px
+        margin-bottom: 18px
+    .procedure-text
+        font-size: $otherfontsize
+        line-height: 24px
+        margin-bottom: 7px
+    .procedure-text_warning
+        font-weight: 600
+        border-radius: 4px
+        background-color: #f3f8fe
+        width: 100%
+        padding: 11px 15px
+    .btn-primary
+        padding: 20px 35px
+        margin: 30px 0 40px 0
+    .gallery
+        padding-top: 40px
+        border-top: 1px solid #d2d2d2
+        .gallery-text
+            transform: rotate(-90deg)
+            transform-origin: 80% 160%
+            font-family: $florentia
+            font-weight: 800
+            font-size: 41px
+            color: #9aa8b8
+            line-height: 55px
+.owl-carousel
+    .owl-item
+        img
+            border-radius: 11px
+    .owl-prev, .owl-next
+        width: 54px
+        height: 54px
+        color: #494949 !important
+        box-shadow: 0 1px 6px 1px rgba(0, 34, 75, 0.27)
+        border-radius: 50% !important
+        background-color: $white !important
+        font-size: 21px !important
+        position: absolute
+        top: 50%
+        margin-top: -27px !important
+        outline: none
+        transition: 0.2s ease all
+    .owl-nav [class*=owl-]:hover
+        color: $elementcolor !important
+        box-shadow: 0 3px 41px 8px rgba(0, 34, 75, 0.33)
+    .owl-prev
+        left: -18px
+    .owl-next
+        right: -18px
+@media screen and ( max-width: 640px  )
+    .owl-carousel
+        .owl-prev, .owl-next
+            width: 38px
+            height: 38px
+            top: 100%
+    .section-procedure
+        .col-md-4, .col-md-8
+            padding: 0
+        .procedure-title
+            font-size: $textfontsize
+            line-height: 24px
+        .procedure-text
+            font-size: $otherfontsize
+            line-height: 24px
+        .procedure-text_warning
+            margin-top: 10px
+            margin-bottom: 30px
+        .gallery
+            padding-bottom: 60px
+            .gallery-text
+                position: absolute
+                left: 80px
+                top: -175px
+                height: 126px
+                font-size: 31px
+        .owl-carousel
+            margin-left: 40px
+            .owl-item
+                img
+                    border-radius: 20px
+            .owl-prev
+                left: 20%
+            .owl-next
+                right: 20%
+        .btn-primary
+            margin: 10px 0 30px 0
+
+@media screen and (min-width: 640px) and ( max-width: 980px  )
+    .section-procedure
+        .gallery
+            .gallery-text
+                position: absolute
+                left: 80px
+                top: -60%
+                height: 126px
+                font-size: 31px
+        .owl-carousel
+            margin-bottom: 70px
+
+@media screen and (min-width: 980px) and ( max-width: 1280px  )
+    .section-procedure
+        .gallery
+            .gallery-text
+                position: absolute
+                left: 80px
+                top: -60%
+                height: 126px
+                font-size: 41px
+//  ===== END PROCEDURES SECTION ===== 
+
+//  ===== START PROCEDURES-2 SECTION =====
+.section-procedure-2
+    .medical-title
+        max-width: 1090px
+.mb10
+    margin-bottom: 100px
+.title_mt10
+    margin-top: 100px
+
+@media screen and ( max-width: 980px  )
+    .section-procedure-2
+        .title_mt10
+            margin-top: 0px
+        .resolve-cards
+            margin-bottom: 0
+    .mb10
+        margin-bottom: 50px
+
+@media screen and ( max-width: 980px ) and ( max-width: 1280px )
+    .title_mt10
+        margin-top: 76px
+//  ===== END PROCEDURES-2 SECTION ===== 
+
+//  ===== START FEEDBACK SECTION ===== 
+.section-feedback
+    min-height: 600px
+#feedback-carousel
+    .owl-item
+        border-radius: 10px !important
+        background-color: $white !important
+        padding: 25px 0
+        p, .person-name
+            font-size: $otherfontsize
+            line-height: 22px
+            letter-spacing: 0.32px
+        p
+            max-width: 360px
+            position: relative
+        .quotes
+            &::before
+                content: ""
+                position: absolute
+                top: -30px
+                left: -10px
+                background-image: url(/images/dest/feedback/quote1.png)
+                width: 22px
+                height: 20px
+                margin-right: 10px
+                color: $elementcolor
+            &::after
+                content: ""
+                position: absolute
+                right: 10px
+                bottom: -30px
+                width: 22px
+                height: 20px
+                background-image: url(/images/dest/feedback/quote2.png)
+                margin-right: 10px
+                color: $elementcolor
+        img
+            max-width: 145px
+            margin-bottom: 14px
+        .person
+            display: flex
+            flex-direction: column
+            align-items: center
+    .owl-prev
+        left: -90px
+    .owl-next
+        right: -90px
+
+@media screen and (min-width: 320px) and ( max-width: 640px )
+    .section-feedback
+        min-height: 510px
+
+@media screen and ( max-width: 980px  )
+    #feedback-carousel
+        .owl-prev
+            left: 20%
+            top: 103%
+        .owl-next
+            top: 103%
+            right: 20%
+        .owl-item
+            p
+                display: -webkit-box
+                -webkit-line-clamp: 8
+                -webkit-box-orient: vertical
+                overflow: hidden
+            .quotes
+                &::before
+                    top: -23px
+                    left: -10px
+                &::after
+                    bottom: -10px
+                    right: 0
+
+@media screen and ( min-width: 640px ) and ( max-width: 980px )
+    .section-feedback
+        min-height: 600px
+    #feedback-carousel
+        .owl-item
+            p
+                max-width: initial
+                padding: 0 20px
+
+@media screen and ( min-width: 980px ) and ( max-width: 1280px )
+    #feedback-carousel
+        width: 85%
+        max-width: 825px
+        margin: 0 auto
+        .owl-prev
+            top: 40%
+        .owl-next
+            top: 40%
+        .owl-item
+            max-width: 400px
+            p
+                padding-right: 20px
+            .quotes
+                &::before
+                    top: -23px
+                    left: -10px
+                &::after
+                    bottom: -10px
+                    right: 0
+
+@media screen and ( min-width: 1280px ) and ( max-width: 1400px )
+    #feedback-carousel
+        width: 85%
+        max-width: 825px
+        margin: 0 auto
+        .owl-item
+            max-width: 400px
+            .quotes
+                &::before
+                    top: -23px
+                    left: -10px
+                &::after
+                    bottom: -10px
+                    right: 0
+//  ===== END FEEDBACK SECTION ===== 
+
+// ===== START FAQ SECTION =====
+.section-faq
+    .card
+        background: none
+        border: none
+        box-shadow: 0 5px 16px 2px rgba(0, 34, 75, 0.11)
+        margin-bottom: 20px
+        border-radius: 15px !important
+        .card-header
+            padding: 0
+            background: none
+            border: none
+            position: relative
+            .btn-link
+                width: 97%
+                background-color: $white
+                color: $textcolor
+                text-align: left
+                font-weight: 600
+                font-size: $textfontsize
+                white-space: normal
+                line-height: 24px
+                &:hover, &:focus
+                    text-decoration: none
+                    &::before
+                        background-color: #ffa800
+                &::before
+                    content: '-'
+                    display: inline-block
+                    top: 50%
+                    margin-top: -20px
+                    width: 40px
+                    height: 40px
+                    border-radius: 50%
+                    background-color: $elementcolor
+                    position: absolute
+                    right: 20px
+                    color: $white
+                    font-size: 30px
+                    text-align: center
+                    line-height: 37px
+                    font-family: serif
+                    font-weight: 300
+            .collapsed
+                &::before
+                    content: '+'
+                    position: absolute
+                    display: inline-block
+                    margin-top: -20px
+                    width: 40px
+                    height: 40px
+                    top: 50%
+                    right: 20px
+                    font-family: serif
+                    font-weight: 300
+                    color: $white
+                    font-size: 32px
+                    background-color: $elementcolor
+                    border-radius: 50%
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    line-height: 19px
+        .card-body
+            font-size: $otherfontsize
+            color: #484848
+            line-height: 24px
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                top: 0
+                width: 94%
+                height: 1px
+                border-top: 1px solid #e0e0e0
+
+@media screen and ( max-width: 640px  )
+    .section-faq
+        .col-md-6
+            padding: 0
+
+@media screen and ( max-width: 1280px  )
+    .section-faq
+        .card
+            .card-header
+                .btn-link
+                    width: 92%
+
+@media screen and ( max-width: 980px  )
+    .section-faq
+        .card
+            .card-header
+                .btn-link
+                    &::before
+                        width: 37px
+                        height: 37px
+                        right: 7px
+                        line-height: 32px
+                .collapsed
+                    &::before
+                        width: 37px
+                        height: 37px
+                        right: 7px
+            .card-body
+                font-size: 15px
+        .accordion
+            padding-bottom: 0
+        .btn-link
+            font-size: $otherfontsize
+// ===== END FAQ SECTION =====
+
+// ===== START PRICE SECTION =====
+.section-price
+    .price-text
+        max-width: 1050px
+        color: #484848
+        font-size: 22px
+        line-height: 32px
+        letter-spacing: 0.44px
+        text-align: center
+        margin: 0 auto 24px auto
+    .pricelist-wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+        .list-item
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 100%
+            max-width: 840px
+            padding: 15px 20px
+            box-shadow: 0 5px 16px 2px rgba(0, 34, 75, 0.11)
+            border-radius: 10px
+            background-color: $white
+            margin-bottom: 10px
+            font-size: $otherfontsize
+            font-weight: 600
+            line-height: 22px
+            text-transform: uppercase
+            letter-spacing: 0.32px
+            .item-price
+                text-align: right
+                color: $elementcolor
+            .no-wrap
+                white-space: nowrap
+    .btn-primary
+        margin-top: 30px
+
+@media screen and ( max-width: 640px  )
+    .section-price
+        min-height: 700px
+        .price-text
+            font-size: $otherfontsize
+            line-height: 24px
+        .pricelist-wrapper
+            .list-item
+                padding: 12px 15px
+                font-size: $menufontsize
+                letter-spacing: 0.3px
+                .item-price
+                    line-height: 22px
+        .btn-primary
+            margin-bottom: 50px
+// ===== END PRICE SECTION =====
+
+// ===== START FORM SECTION =====
+.section-form
+    .form-text
+        font-size: 24px
+        line-height: 55px
+        text-align: center
+        margin: 0 auto
+    form
+        max-width: 820px
+        margin: 0 auto
+        .form-group.col-md-6
+            padding: 0
+            &:nth-child(1)
+                padding-right: 13px
+            &:nth-child(2)
+                padding-left: 13px
+        .form-group
+            margin-bottom: 10px
+            textarea
+                padding-top: 6px
+                resize: none
+        .btn_maxwidth
+            max-width: 400px
+            width: 100%
+            margin-top: 30px
+            margin-bottom: 100px
+        .form-title
+            margin-bottom: 10px
+        .form-control
+            min-height: 55px
+            line-height: 32px
+            border-radius: 28px
+            border: 2px solid #cdd5df
+            padding: 0 20px
+            &:focus
+                box-shadow: none
+            &::placeholder
+                color: #bababa
+        .custom-file
+            min-height: 60px
+            .custom-file-input
+                &:focus ~
+                    .custom-file-label
+                        box-shadow: none
+                        border: none
+            .custom-file-label
+                border-radius: 28px
+                background-color: #eaeff4
+                min-height: 55px
+                line-height: 53px
+                padding: 0 26px
+                &::after
+                    border-radius: 28px
+                    background-color: #b8c2cf
+                    min-width: 190px
+                    min-height: 55px
+                    color: $white
+                    font-size: $textfontsize
+                    line-height: 42px
+                    text-align: center
+                    right: -1px
+
+        .form-control, .form-control
+            &::placeholder
+                font-size: $textfontsize
+                line-height: 32px
+        .datepicker
+            position: relative
+            &::after
+                content: ''
+                position: absolute
+                background-image: url(/images/dest/form/calendar.png)
+                background-color: #cdd5df
+                width: 43px
+                height: 43px
+                border-radius: 50%
+                right: 5%
+                top: 50%
+                margin-top: -22px
+            .form-control
+                cursor: pointer
+
+        .timepicker
+            position: relative
+            &::after
+                content: ''
+                position: absolute
+                background-image: url(/images/dest/form/time.png)
+                background-color: #cdd5df
+                width: 43px
+                height: 43px
+                border-radius: 50%
+                right: 2%
+                top: 50%
+                margin-top: -22px
+.ui-icon,
+.ui-widget-content .ui-icon
+    background-image: url("/images/dest/form/ui-icons_444444_256x240.png")
+
+.ui-widget-header .ui-icon
+    background-image: url("/images/dest/form/ui-icons_444444_256x240.png")
+
+.ui-state-hover .ui-icon,
+.ui-state-focus .ui-icon,
+.ui-button:hover .ui-icon,
+.ui-button:focus .ui-icon
+    background-image: url("/images/dest/form/ui-icons_555555_256x240.png")
+
+.ui-state-active .ui-icon,
+.ui-button:active .ui-icon
+    background-image: url("/images/dest/form/ui-icons_ffffff_256x240.png")
+
+.ui-state-highlight .ui-icon,
+.ui-button .ui-state-highlight.ui-icon
+    background-image: url("/images/dest/form/ui-icons_777620_256x240.png")
+
+.ui-state-error .ui-icon,
+.ui-state-error-text .ui-icon
+    background-image: url("/images/dest/form/ui-icons_cc0000_256x240.png")
+
+.ui-button .ui-icon
+    background-image: url("/images/dest/form/ui-icons_777777_256x240.png")
+.form-check
+    padding: 0px
+    margin-bottom: 10px
+.checkbox
+    display: none
+
+.checkbox + label
+    position: relative
+    padding: 0 0 0 41px
+    margin-right: 70px
+    cursor: pointer
+    &:before
+        content: ''
+        position: absolute
+        left: 0
+        width: 28px
+        height: 28px
+        border-radius: 3px
+        background-color: #eaeff4
+    &:after
+        content: ''
+        position: absolute
+        background-color: #f2f2f2
+        left: 4px
+        top: 1px
+        font-size: 25px
+
+.checkbox:checked + label:after
+    content: "✔"
+
+@media screen and ( max-width: 640px  )
+    .section-form
+        .form-text
+            font-size: $textfontsize
+            line-height: 28px
+            margin-bottom: 20px
+        .invalid-feedback
+            text-align: center
+        .form-control, &::placeholder
+            font-size: $otherfontsize
+        form
+            .custom-file
+                .custom-file-label
+                    font-size: $otherfontsize
+                    &::after
+                        min-width: 143px
+                        font-size: $otherfontsize
+        .form-check-inline
+            display: block
+            .form-check-label
+                margin-bottom: 10px
+        .checkbox+label
+            margin-right: 50%
+
+@media screen and ( max-width: 767px  )
+    .section-form
+        .form-group.col-md-6
+            padding: 0 !important
+        form
+            .datepicker
+                &::after
+                    right: 1%
+            .timepicker
+                &::after
+                    right: 1%
+// ===== END FORM SECTION =====
+
+// ===== START FOOTER SECTION =====
+.section-footer
+    min-height: 175px
+    padding: 20px 15px 0 15px
+    .footer-left-text
+        font-size: $menufontsize
+        color: #323232
+        line-height: 22px
+    .footer-right-text
+        color: #323232
+        font-size: $otherfontsize
+        line-height: 30px
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        a
+            color: #808080
+            text-decoration: underline
+    .footer-top
+        padding-bottom: 10px
+    .footer-bottom
+        width: 100%
+        max-width: 1210px
+        text-align: center
+        color: #323232
+        font-size: $menufontsize
+        text-decoration: underline
+        border-top: 1px solid #13275a
+        padding: 20px 15px
+        margin: 0 auto
+@media screen and ( max-width: 640px  )
+    .section-footer
+        padding: 30px 0px 0 0px
+        .footer-top
+            .col-md-8, .col-md-4
+                padding: 0
+            .footer-right-text
+                margin-top: 20px
+                font-size: 15px
+                line-height: 25px
+// ===== END FOOTER SECTION =====
+
+// ===== START MODAL SECTION =====
+.modal-dialog
+    min-height: 93vh
+    display: flex
+    align-items: center
+    justify-content: center
+    .modal-content
+        padding: 40px 20px
+        max-width: 400px
+        border-radius: 15px
+        .modal-body
+            padding: 0
+            .modal-title
+                font-size: 22px
+                line-height: 24px
+                margin-bottom: 20px
+            .modal-text
+                font-size: $otherfontsize
+                line-height: 24px
+                margin-bottom: 16px
+                color: #6e6e6e
+    .btn
+        width: 190px
+// ===== END MODAL SECTION =====
+
+.back-to-top
+    background-color: #00224b
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 63px
+    height: 63px
+    cursor: pointer
+    position: fixed
+    bottom: 30px
+    right: 30px
+    &:hover
+        background-color: #004394
+        transform: scale(1.1)
+.arrow-8
+    position: relative
+    width: 20px
+    height: 20px
+    &:before
+        content: ''
+        position: absolute
+        box-sizing: border-box
+        width: 100%
+        height: 100%
+        border-left: 2px solid $white
+        border-bottom: 2px solid $white
+        transform: translate(1px, 5px) rotate(135deg)
+
+@media screen and ( max-width: 640px  )
+    .back-to-top
+        width: 40px
+        height: 40px
+    .arrow-8
+        width: 15px
+        height: 15px
+        &:before
+            transform: translate(1px, 3px) rotate(135deg)
