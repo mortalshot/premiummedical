@@ -5,42 +5,42 @@ document.addEventListener("DOMContentLoaded", function () {
 	$(document).ready(function () {
 		$(".gallery-carousel").owlCarousel({
 			loop: true,
-			items: 4,
 			nav: true,
 			dots: false,
 			autoplay: true,
 			autoplayHoverPause: true,
 			navText: '❮❯',
 			margin: 20,
-			autoWidth: true,
 			checkVisibility: false,
 			responsiveClass: true,
 			responsive: {
 				// breakpoint from 0 up
 				0: {
 					items: 1,
-					margin: 0,
 					autoWidth: false,
 				},
 				640: {
 					items: 2,
-					margin: 20,
 					autoWidth: true,
 				},
 				980: {
 					items: 3,
-					nav: true,
-					margin: 20,
 					autoWidth: true,
 				},
 				1280: {
 					items: 4,
-					nav: true,
-					margin: 20,
 					autoWidth: true,
 				}
 			},
+			onInitialized: slideOpacity,
+			onTranslated: slideOpacity
 		});
+		function slideOpacity() {
+			$('.gallery-carousel .owl-item.opacity').removeClass('opacity');
+			$('.gallery-carousel .owl-item.active').eq(-1).addClass('opacity');
+			$('.gallery-carousel2 .owl-item.opacity').removeClass('opacity');
+			$('.gallery-carousel2 .owl-item.active').eq(-1).addClass('opacity');
+		}
 	});
 	//  ===== END OWL-CAROUSEL JS ===== 
 
