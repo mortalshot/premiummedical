@@ -57,10 +57,18 @@ header
 .header-language
     display: flex
     .header-language-item
+        color: #333333
         margin-right: 16px
 .dropdown
     .dropdown-toggle
         color: #a1a1a1
+        &::after
+            width: 15px
+            height: 9px
+            border: none
+            vertical-align: 0.055em
+            margin-left: 6px
+            background-image: url(../images/dest/firstscreen/next.png)
         &:hover
             text-decoration: none
     .header-language-item
@@ -100,6 +108,7 @@ header
         .header-language-item
             margin: 0
 .header-bottom
+    position: relative
     display: flex
     justify-content: center
     box-shadow: 0 6px 8px -2px rgba(0,34,75,.2)
@@ -109,7 +118,6 @@ header
     position: fixed
     top: 0
     width: 100%
-
 .navbar-expand-lg .navbar-nav .nav-link, .navbar
     padding: 0
 .nav-item
@@ -137,8 +145,8 @@ header
     background-color: $textcolor
     display: block
     transition: all 0.2s
-    margin-top: 4px
-    border-radius: 25px
+    margin-top: 7px
+    border-radius: 15%
 .navbar-toggler
     border: none
     background: transparent
@@ -147,12 +155,12 @@ header
 .navbar-toggler
     .top-bar
         transform: rotate(45deg)
-        transform-origin: 20% 10%
+        transform-origin: 0% 50%
     .middle-bar
         opacity: 0
     .bottom-bar
         transform: rotate(-45deg)
-        transform-origin: 15% 100%
+        transform-origin: 10% 100%
     &.collapsed
         .top-bar
             transform: rotate(0)
@@ -182,14 +190,16 @@ header
     .nav-item
         text-align: left
         padding-left: 20px
-
+@media screen and ( max-width: 1079px )
+    header
+        .navbar-toggler
+            padding-left: 0
+            right: 0
+            top: 0
 @media screen and ( max-width: 1199px )
     header
         .navbar
             width: 100%
-        .navbar-toggler
-            right: 0
-            top: 0
         .navbar-collapse
             margin-top: 20px
             text-align: center
@@ -217,7 +227,6 @@ header
             margin-right: 20px
         .header-contact__text
             margin-right: 15px
-
 @media screen and ( min-width: 992px ) and ( max-width: 1199px )
     header
         .btn-primary
@@ -230,6 +239,13 @@ header
                 margin-left: 20px
         .header-contact__text
             margin-right: 15px
+@media screen and ( min-width: 1080px ) and ( max-width: 1199px )
+    header
+        .navbar-toggler
+            padding-right: 50px
+        .header-bottom
+            .img-fluid
+                margin-left: 50px
 
 @media screen and ( min-width: 1200px) and ( max-width: 1350px )
     .header-bottom-navbar
@@ -246,7 +262,7 @@ header
     display: flex
     align-items: center
 .section-firstscreen
-    background-image: url(/images/dest/firstscreen/firstscreenimage.jpg)
+    background-image: url(../images/dest/firstscreen/firstscreenimage.jpg)
     width: 100%
     min-height: 580px
     background-size: cover
@@ -276,16 +292,16 @@ header
         color: #333
         margin-bottom: 25px
 
-@media screen and ( max-width: 767px )
+@media screen and ( max-width: 639px )
     .section-firstscreen
         min-height: 680px
         background-position: 80% 100%
-        background-image: url(/images/dest/firstscreen/bg2.jpg)
+        background-image: url(../images/dest/firstscreen/bg2.jpg)
+        .firstscreen-wrapper
+            max-width: 390px
 @media screen and ( max-width: 991px )
     .section-firstscreen
         background-position: 60% 100%
-        .firstscree-wrapper
-            max-width: 490px
         .firstscreen-title
             font-size: 26px
             line-height: 36px
@@ -298,17 +314,27 @@ header
             margin-bottom: 15px
         .firstscreen-buttons
             display: flex
-@media screen and ( min-width: 768px) and ( max-width: 991px )
+@media screen and ( min-width: 640px) and ( max-width: 991px )
     .section-firstscreen
         .firstscreen-wrapper
-            max-width: 490px
+            max-width: 400px
+            .firstscreen-title
+                font-size: 40px
+            .firstscreen-subtitle
+                font-size: 20px
+            .btn
+                min-width: 140px
+                max-width: 160px
+
 @media screen and ( min-width: 992px) and ( max-width: 1280px )
     .section-firstscreen
         background-position: 60% 100%
+        .firstscreen-wrapper
+            max-width: 620px
         .firstscreen-title
             font-size: 44px
             line-height: 55px
-            margin-bottom: 45px
+            margin-bottom: 37px
             padding-top: 100px
         .firstscreen-subtitle
             font-size: 20px
@@ -317,49 +343,9 @@ header
 // ===== END FIRSTSCREEN SECTION ===== 
 
 // ===== START TRANSPLANTATION SECTION =====
-.section-transplantation
-    min-height: 850px
-    .btn-primary
-        padding: 20px 35px
 .cards
     display: flex
     justify-content: space-between
-.transplantation-wrapper
-    text-align: center
-    .transplantation-text
-        line-height: 28px
-        margin-bottom: 36px
-        max-width: 1200px
-    .card-wrapper
-        display: flex
-        justify-content: space-between
-        flex-basis: 25%
-    .transplantation-cards
-        margin-bottom: 39px
-        .arrow
-            display: flex
-            align-items: center
-            justify-content: center
-        .transplantation-card
-            display: flex
-            flex-direction: column
-            justify-content: center
-            align-items: center
-            width: 190px
-            height: 190px
-            border-radius: 50%
-            box-shadow: 0 3px 16px 2px rgba(0, 34, 75, 0.13)
-            overflow: hidden
-        .card-wrapper
-            .transplantation-card
-                margin-right: 5px
-        .card-title
-            font-size: 15px
-            line-height: 20px
-            text-transform: uppercase
-            letter-spacing: -0.15px
-            white-space: normal
-            font-weight: 400
 .title
     max-width: 1200px
     font-family: $florentia
@@ -374,18 +360,53 @@ header
         display: block
         width: 190px
         margin: 20px auto 0 auto
+.section-transplantation
+    min-height: 850px
+    .btn-primary
+        padding: 20px 35px
+.transplantation-wrapper
+    text-align: center
+    .transplantation-text
+        line-height: 28px
+        margin-bottom: 36px
+        max-width: 1200px
+    .card-wrapper
+        display: flex
+        justify-content: space-between
+        flex-basis: 25%
+        position: relative
+    .transplantation-cards
+        margin-bottom: 39px
+        .transplantation-card
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            width: 190px
+            height: 190px
+            border-radius: 50%
+            box-shadow: 0 3px 16px 2px rgba(0, 34, 75, 0.13)
+            overflow: hidden
+        .card-title
+            font-size: 15px
+            line-height: 20px
+            text-transform: uppercase
+            letter-spacing: -0.15px
+            white-space: normal
+            font-weight: 400
 
-@media screen and ( max-width: 640px )
+@media screen and ( max-width: 639px )
     .title
         font-size: 30px
         line-height: 40px
         margin-bottom: 28px
         &::after
+            width: 120px
             margin-top: 14px
     .pt10, .pb10
         padding-top: 50px
 
-@media screen and ( max-width: 980px )
+@media screen and ( max-width: 979px )
     .transplantation-wrapper
         .transplantation-cards
             display: block
@@ -399,11 +420,11 @@ header
                 .arror_mirrorY
                     transform: rotate(90deg) scale(1, -1)
             .transplantation-card
-                    margin: 0 auto
+                margin: 0 auto
         .btn-primary
             margin-bottom: 50px
 
-@media screen and ( min-width: 641px) and ( max-width: 1280px )
+@media screen and ( min-width: 640px) and ( max-width: 1280px )
     .pt10
         padding-top: 77px
     .title
@@ -411,6 +432,7 @@ header
         line-height: 50px
         margin-bottom: 39px
         &::after
+            width: 147px
             margin-top: 22px
 @media screen and ( min-width: 980px) and ( max-width: 1280px )
     .section-transplantation
@@ -423,6 +445,27 @@ header
                     .card-title
                         font-size: 13px
                         line-height: 17px
+@media screen and ( min-width: 980px) and ( max-width: 1099px )
+    .card-wrapper
+        .arrow
+            position: absolute
+            right: -7%
+            top: 50%
+            margin-top: -9px
+@media screen and ( min-width: 1080px) and ( max-width: 1199px )
+    .card-wrapper
+        .arrow
+            position: absolute
+            right: -6%
+            top: 50%
+            margin-top: -9px
+@media screen and ( min-width: 1200px)
+    .card-wrapper
+        .arrow
+            position: absolute
+            right: -5%
+            top: 50%
+            margin-top: -9px
 // ===== END TRANSPLANTATION SECTION =====
 
 // ===== START RESOLVE SECTION ===== 
@@ -452,22 +495,20 @@ header
             transition: all 0.4s ease-out
             &:hover
                 transform: scale(1.2)
-@media screen and ( max-width: 980px )
+@media screen and ( max-width: 979px )
     .resolve-cards
         margin-bottom: 25px
         .cards-wrapper
             flex-wrap: wrap
             .card-title
-                margin-bottom: 25px
+                margin-bottom: 20px
 
-@media screen and (min-width: 640px) and ( max-width: 980px )
+@media screen and (min-width: 640px) and ( max-width: 979px )
     .resolve-cards
         margin-bottom: 65px
 // ===== END RESOLVE SECTION ===== 
 
 // ===== START CAPABILITY SECTION ===== 
-.section-capability
-    min-height: 780px
 .capability-card
     flex-basis: 600px
     max-width: 610px
@@ -488,13 +529,11 @@ header
         width: 100%
         text-align: center
 
-@media screen and ( max-width: 640px )
+@media screen and ( max-width: 639px )
     .section-capability
-        min-height: 870px
         .col-lg-6
             padding: 0
     .capability-card
-        min-height: 212px
         .card-title
             font-size: 20px
             margin-bottom: 16px
@@ -502,8 +541,24 @@ header
             text-align: center
 
 @media screen and ( max-width: 991px )
+    .section-capability
+        .pb10
+            padding-top: 0
+            padding-bottom: 30px
     .capability-card
         margin-bottom: 20px
+
+@media screen and ( min-width: 640px ) and ( max-width: 1280px )
+    .capability-card
+        .card-title
+            font-size: 25px
+            line-height: 35px
+            margin-bottom: 25px
+            padding: 0 12px
+@media screen and ( min-width: 992px ) and ( max-width: 1280px )
+    .section-capability
+        .pb10
+            padding-bottom: 80px
 // ===== END CAPABILITY SECTION ===== 
 
 //  ===== START PROCEDURES SECTION ===== 
@@ -554,10 +609,35 @@ header
             font-size: 41px
             color: #9aa8b8
             line-height: 55px
+.gallery-carousel
+    .owl-item.opacity
+        transition: all 0.2s ease
+        &::after
+            background: linear-gradient(-90deg,#fff 15%,rgba(255,255,255,.1) 100%)
+            content: ""
+            display: block
+            height: 100%
+            left: 0
+            position: absolute
+            top: 0
+            width: 100%
+.gallery-carousel2
+    .owl-item.opacity
+        transition: all 0.2s ease
+        &::after
+            background: linear-gradient(-90deg,#fff 15%,rgba(255,255,255,.1) 100%)
+            content: ""
+            display: block
+            height: 100%
+            left: 0
+            position: absolute
+            top: 0
+            width: 100%
 .owl-carousel
     .owl-item
         img
             border-radius: 11px
+
     .owl-prev, .owl-next
         width: 54px
         height: 54px
@@ -578,13 +658,29 @@ header
         left: -18px
     .owl-next
         right: -18px
-@media screen and ( max-width: 640px  )
+@media screen and ( max-width: 639px  )
+    .gallery-carousel
+        margin-left: 40px
+        .owl-item.opacity
+            &::after
+                display: none
+    .section-procedure
+        .procedure-description
+            align-items: flex-start
+        .btn-primary
+            margin: 10px 0 30px 0
     .owl-carousel
+        .owl-item
+            img
+                border-radius: 20px
         .owl-prev, .owl-next
             width: 38px
             height: 38px
             top: 100%
-    .section-procedure
+        .owl-prev
+            left: 20%
+        .owl-next
+            right: 20%
         .col-md-4, .col-md-8
             padding: 0
         .procedure-title
@@ -594,29 +690,32 @@ header
             font-size: $otherfontsize
             line-height: 24px
         .procedure-text_warning
+            padding: 14px 7px
             margin-top: 10px
             margin-bottom: 30px
-        .gallery
-            padding-bottom: 60px
-            .gallery-text
-                position: absolute
-                left: 80px
-                top: -175px
-                height: 126px
-                font-size: 31px
-        .owl-carousel
-            margin-left: 40px
-            .owl-item
-                img
-                    border-radius: 20px
-            .owl-prev
-                left: 20%
-            .owl-next
-                right: 20%
-        .btn-primary
-            margin: 10px 0 30px 0
+    .gallery
+        padding-top: 30px
+        padding-bottom: 60px
+        .gallery-text
+            position: absolute
+            left: 60px
+            top: -175px
+            height: 126px
+            font-size: 31px
 
-@media screen and (min-width: 640px) and ( max-width: 980px  )
+@media screen and ( max-width: 1279px )
+    .section-procedure
+        .procedure-description
+            .description-text
+                font-size: 16px
+                line-height: 24px
+                strong
+                    font-size: 18px
+            .procedure-img
+                margin-bottom: 9px
+                width: 68px
+                height: 68px
+@media screen and (min-width: 640px) and ( max-width: 979px  )
     .section-procedure
         .gallery
             .gallery-text
@@ -627,44 +726,72 @@ header
                 font-size: 31px
         .owl-carousel
             margin-bottom: 70px
+        .gallery.pb10
+            padding-bottom: 0
 
-@media screen and (min-width: 980px) and ( max-width: 1280px  )
+@media screen and (min-width: 980px) and ( max-width: 1279px  )
     .section-procedure
         .gallery
             .gallery-text
                 position: absolute
                 left: 80px
-                top: -60%
+                top: -100%
                 height: 126px
                 font-size: 41px
+@media screen and (min-width: 1280px )
+    .section-procedure
+        .gallery
+            .gallery-text
+                transform-origin: 120% 160%
+
 //  ===== END PROCEDURES SECTION ===== 
 
 //  ===== START PROCEDURES-2 SECTION =====
 .section-procedure-2
+    .mb10
+        margin-bottom: 100px
     .medical-title
         max-width: 1090px
 .mb10
     margin-bottom: 100px
 .title_mt10
     margin-top: 100px
+@media screen and ( max-width: 639px  )
+    .section-procedure-2
+        .btn-primary.mb10
+            margin-bottom: 50px
 
-@media screen and ( max-width: 980px  )
+@media screen and ( max-width: 979px  )
     .section-procedure-2
         .title_mt10
             margin-top: 0px
         .resolve-cards
             margin-bottom: 0
+        .btn-primary.mb10
+            margin-bottom: 50px
     .mb10
         margin-bottom: 50px
 
-@media screen and ( max-width: 980px ) and ( max-width: 1280px )
+@media screen and ( min-width: 980px ) and ( max-width: 1280px )
     .title_mt10
         margin-top: 76px
+    .section-procedure
+        .mb10
+            margin-bottom: 80px
+    .section-procedure-2
+        .btn-primary.mb10
+            margin-bottom: 80px
+@media screen and ( min-width: 800px ) and ( max-width: 1140px )
+    .section-procedure
+        .resolve-card
+            flex-basis: 25%
 //  ===== END PROCEDURES-2 SECTION ===== 
 
 //  ===== START FEEDBACK SECTION ===== 
 .section-feedback
-    min-height: 600px
+    min-height: 615px
+    background-repeat: no-repeat
+    background-size: cover
 #feedback-carousel
     .owl-item
         border-radius: 10px !important
@@ -674,6 +801,7 @@ header
             font-size: $otherfontsize
             line-height: 22px
             letter-spacing: 0.32px
+            color: #474747
         p
             max-width: 360px
             position: relative
@@ -683,7 +811,7 @@ header
                 position: absolute
                 top: -30px
                 left: -10px
-                background-image: url(/images/dest/feedback/quote1.png)
+                background-image: url(../images/dest/feedback/quote1.png)
                 width: 22px
                 height: 20px
                 margin-right: 10px
@@ -695,7 +823,7 @@ header
                 bottom: -30px
                 width: 22px
                 height: 20px
-                background-image: url(/images/dest/feedback/quote2.png)
+                background-image: url(../images/dest/feedback/quote2.png)
                 margin-right: 10px
                 color: $elementcolor
         img
@@ -706,22 +834,33 @@ header
             flex-direction: column
             align-items: center
     .owl-prev
-        left: -90px
+        left: -87px
     .owl-next
-        right: -90px
+        right: -87px
+.mb10
+    margin-bottom: 100px
 
-@media screen and (min-width: 320px) and ( max-width: 640px )
+@media screen and ( max-width: 400px )
     .section-feedback
-        min-height: 510px
+        min-height: 470px
+    #feedback-carousel
+        .owl-item
+            img
+                max-width: 115px
+@media screen and ( max-width: 639px )
+    #feedback-carousel
+        margin: 0
+    .mb10
+        margin-bottom: 70px
 
-@media screen and ( max-width: 980px  )
+@media screen and ( max-width: 979px  )
     #feedback-carousel
         .owl-prev
-            left: 20%
+            left: 28%
             top: 103%
         .owl-next
             top: 103%
-            right: 20%
+            right: 28%
         .owl-item
             p
                 display: -webkit-box
@@ -736,24 +875,44 @@ header
                     bottom: -10px
                     right: 0
 
+@media screen and ( max-width: 1279px  )
+    #feedback-carousel
+        .owl-item
+            p
+                display: -webkit-box
+                -webkit-line-clamp: 8
+                -webkit-box-orient: vertical
+                overflow: hidden
+    .mb10
+        margin-bottom: 80px
+
+@media screen and ( min-width: 401px ) and ( max-width: 639px )
+    .section-feedback
+        min-height: 515px
+
 @media screen and ( min-width: 640px ) and ( max-width: 980px )
     .section-feedback
-        min-height: 600px
+        min-height: 580px
     #feedback-carousel
         .owl-item
             p
                 max-width: initial
                 padding: 0 20px
 
-@media screen and ( min-width: 980px ) and ( max-width: 1280px )
+@media screen and ( min-width: 980px ) and ( max-width: 1279px )
+    .section-feedback
+        min-height: 520px
+        .pb10
+            padding-bottom: 80px
     #feedback-carousel
         width: 85%
         max-width: 825px
-        margin: 0 auto
+        margin: 0 auto 80px auto
         .owl-prev
-            top: 40%
+            top: 50%
         .owl-next
-            top: 40%
+            top: 50%
+            right: -80px
         .owl-item
             max-width: 400px
             p
@@ -784,6 +943,8 @@ header
 
 // ===== START FAQ SECTION =====
 .section-faq
+    .pb5
+        padding-bottom: 80px
     .card
         background: none
         border: none
@@ -796,7 +957,7 @@ header
             border: none
             position: relative
             .btn-link
-                width: 97%
+                width: 93%
                 background-color: $white
                 color: $textcolor
                 text-align: left
@@ -858,17 +1019,26 @@ header
                 height: 1px
                 border-top: 1px solid #e0e0e0
 
-@media screen and ( max-width: 640px  )
+@media screen and ( max-width: 639px  )
     .section-faq
         .col-md-6
             padding: 0
+        .card
+            margin-bottom: 10px
+            .card-header
+                .btn-link
+                    font-size: 16px
+                    line-height: 24px
+                    padding: 20px 15px
+            .card-body
+                padding: 14px
 
 @media screen and ( max-width: 1280px  )
     .section-faq
         .card
             .card-header
                 .btn-link
-                    width: 92%
+                    width: 90%
 
 @media screen and ( max-width: 980px  )
     .section-faq
@@ -929,23 +1099,33 @@ header
             .no-wrap
                 white-space: nowrap
     .btn-primary
-        margin-top: 30px
+        margin-top: 20px
 
-@media screen and ( max-width: 640px  )
+@media screen and ( max-width: 639px  )
     .section-price
-        min-height: 700px
         .price-text
             font-size: $otherfontsize
             line-height: 24px
+            margin-bottom: 16px
         .pricelist-wrapper
             .list-item
                 padding: 12px 15px
-                font-size: $menufontsize
+                font-size: 15px
                 letter-spacing: 0.3px
                 .item-price
                     line-height: 22px
         .btn-primary
+            margin-top: 20px
             margin-bottom: 50px
+@media screen and ( max-width: 1280px  )
+    .section-price
+        .price-text
+            max-width: 924px
+            font-size: 18px
+            letter-spacing: 0.36px
+            line-height: 28px
+        .btn-primary
+            margin-top: 10px
 // ===== END PRICE SECTION =====
 
 // ===== START FORM SECTION =====
@@ -967,6 +1147,7 @@ header
         .form-group
             margin-bottom: 10px
             textarea
+                min-height: 134px
                 padding-top: 6px
                 resize: none
         .btn_maxwidth
@@ -1019,7 +1200,7 @@ header
             &::after
                 content: ''
                 position: absolute
-                background-image: url(/images/dest/form/calendar.png)
+                background-image: url(../images/dest/form/calendar.png)
                 background-color: #cdd5df
                 width: 43px
                 height: 43px
@@ -1035,7 +1216,7 @@ header
             &::after
                 content: ''
                 position: absolute
-                background-image: url(/images/dest/form/time.png)
+                background-image: url(../images/dest/form/time.png)
                 background-color: #cdd5df
                 width: 43px
                 height: 43px
@@ -1045,31 +1226,31 @@ header
                 margin-top: -22px
 .ui-icon,
 .ui-widget-content .ui-icon
-    background-image: url("/images/dest/form/ui-icons_444444_256x240.png")
+    background-image: url("../images/dest/form/ui-icons_444444_256x240.png")
 
 .ui-widget-header .ui-icon
-    background-image: url("/images/dest/form/ui-icons_444444_256x240.png")
+    background-image: url("../images/dest/form/ui-icons_444444_256x240.png")
 
 .ui-state-hover .ui-icon,
 .ui-state-focus .ui-icon,
 .ui-button:hover .ui-icon,
 .ui-button:focus .ui-icon
-    background-image: url("/images/dest/form/ui-icons_555555_256x240.png")
+    background-image: url("../images/dest/form/ui-icons_555555_256x240.png")
 
 .ui-state-active .ui-icon,
 .ui-button:active .ui-icon
-    background-image: url("/images/dest/form/ui-icons_ffffff_256x240.png")
+    background-image: url("../images/dest/form/ui-icons_ffffff_256x240.png")
 
 .ui-state-highlight .ui-icon,
 .ui-button .ui-state-highlight.ui-icon
-    background-image: url("/images/dest/form/ui-icons_777620_256x240.png")
+    background-image: url("../images/dest/form/ui-icons_777620_256x240.png")
 
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon
-    background-image: url("/images/dest/form/ui-icons_cc0000_256x240.png")
+    background-image: url("../images/dest/form/ui-icons_cc0000_256x240.png")
 
 .ui-button .ui-icon
-    background-image: url("/images/dest/form/ui-icons_777777_256x240.png")
+    background-image: url("../images/dest/form/ui-icons_777777_256x240.png")
 .form-check
     padding: 0px
     margin-bottom: 10px
@@ -1100,7 +1281,7 @@ header
 .checkbox:checked + label:after
     content: "✔"
 
-@media screen and ( max-width: 640px  )
+@media screen and ( max-width: 639px  )
     .section-form
         .form-text
             font-size: $textfontsize
@@ -1117,6 +1298,9 @@ header
                     &::after
                         min-width: 143px
                         font-size: $otherfontsize
+            .btn_maxwidth
+                margin-top: 4px
+                margin-bottom: 50px
         .form-check-inline
             display: block
             .form-check-label
@@ -1152,11 +1336,16 @@ header
         display: flex
         flex-direction: column
         align-items: flex-end
+        text-align: right
         a
             color: #808080
             text-decoration: underline
     .footer-top
         padding-bottom: 10px
+        .col-md-8
+            padding-left: 0
+        .col-md-4
+            padding-right: 0
     .footer-bottom
         width: 100%
         max-width: 1210px
@@ -1167,14 +1356,14 @@ header
         border-top: 1px solid #13275a
         padding: 20px 15px
         margin: 0 auto
-@media screen and ( max-width: 640px  )
+@media screen and ( max-width: 639px  )
     .section-footer
         padding: 30px 0px 0 0px
         .footer-top
             .col-md-8, .col-md-4
                 padding: 0
             .footer-right-text
-                margin-top: 20px
+                margin-top: 15px
                 font-size: 15px
                 line-height: 25px
 // ===== END FOOTER SECTION =====
@@ -1233,7 +1422,7 @@ header
         border-bottom: 2px solid $white
         transform: translate(1px, 5px) rotate(135deg)
 
-@media screen and ( max-width: 640px  )
+@media screen and ( max-width: 639px  )
     .back-to-top
         width: 40px
         height: 40px
